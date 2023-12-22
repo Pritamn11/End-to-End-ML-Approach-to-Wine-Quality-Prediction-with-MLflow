@@ -66,7 +66,7 @@ def save_json(path: Path, data:dict):
     logger.info(f"JSON file saved at : {path}")    
 
 
-@ensure_annotations
+# @ensure_annotations
 def load_json(path: Path) -> ConfigBox:
     """Load JSON file data.
 
@@ -87,6 +87,8 @@ def load_json(path: Path) -> ConfigBox:
     except Exception as e:
         logger.error(f"Error loading JSON file - {path}: {str(e)}")
         return ConfigBox()
+
+
 
 @ensure_annotations
 def save_bin(data:Any, path:Path):
@@ -114,6 +116,7 @@ def load_bin(path: Path) -> Any:
     data = joblib.load(path)
     logger.info(f"Binary file loaded from : {path}")
     return data
+
 
 
 @ensure_annotations
