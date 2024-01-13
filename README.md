@@ -83,7 +83,7 @@ export MLFLOW_TRACKING_PASSWORD=871b76c6a3213893886036cf5681b2454522ec97
 
 ## 1. Login to AWS console.
 
-## Create IAM user for deployment 
+## 2. Create IAM user for deployment 
   #with specific access 
   1. EC2 access : It is virtual machine. 
 
@@ -132,4 +132,24 @@ export MLFLOW_TRACKING_PASSWORD=871b76c6a3213893886036cf5681b2454522ec97
 
 ## 6. Configure EC2 as self-hosted runner:
 
+   setting>actions>runner>new self hosted runner> choose os> then run command one by one
 
+## 7. Setup github secrets: 
+
+    AWS_ACCESS_KEY_ID=
+
+    AWS_SECRET_ACCESS_KEY=
+
+    AWS_REGION = us-east-1
+
+    AWS_ECR_LOGIN_URI = demo>>   180270381290.dkr.ecr.us-west-2.amazonaws.com
+
+    ECR_REPOSITORY_NAME = wineproj   
+
+### About MLflow 
+
+  MLflow
+
+   * Its Production Grade
+   * Trace all of your expriements
+   * Logging & tagging your model    
